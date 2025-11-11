@@ -1,6 +1,11 @@
 # HotelCore
 HotelCore is a single-hotel booking and management system built on ASP.NET WebForms(VB.NET), SQL Server, and Bootstrap 4. The system introduces "Flexible Stays & Smart Ops" - Supporting micro-stays(hourly bookings), configurable room setups, integrated housekeeping scheduling, and intelligent upsell suggestions.
 
+**System flow and Entity Relationship Diagram (ERD):**
+https://lucid.app/lucidchart/9a1762ff-58c7-4bc7-8b02-398f0f4fd30d/view
+**Project Planning:**
+https://github.com/users/mdnayanmia31/projects/2
+
 # Architectural Layers
 Will use System Design: eraser.io (system flow - will be added to a diagram)
 
@@ -16,13 +21,5 @@ PRESENTATION LAYER -> BUSINESS LOGIC LAYER (BLL) -> DATA ACCESS LAYER (DAL) -> S
 | UI Framework | Bootstrap | 4.6.2 | Mobile-first responsive design |
 | Client Scripting | jQuery | 3.6.0 | AJAX, DOM manipulation, plugins |
 | Hosting | IIS | 10.0 | Windows Server, Plesk |
-
-# Entity Relationship Diagram (ERD)
-Core Domain Entities
-I will create an ERD diagram via Lucidchart -> Entities (tables - DB) Design
-
-# Project Structure
-
-# Key Design Decisions
 
 
