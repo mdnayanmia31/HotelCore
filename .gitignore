@@ -1,0 +1,42 @@
+# Visual Studio IDE
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+bin/
+obj/
+packages/
+*.cache
+
+# Web.config
+Web.config
+App_Data/*.mdf
+App_Data/*.ldf
+
+# Logs
+*.logs
+ErrorLog.txt
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Publish profiles with credentials
+*.pubxml
+*.pubxml.user
+
+# NuGet
+*.nupkg
+**/packages/*
+!**/pakcages/build/
+
+# SQL Server files
+*.mdf
+*.ldf
+*.ndf
+
+# Backup files
+*.bak
+*~
