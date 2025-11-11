@@ -3,6 +3,7 @@ HotelCore is a single-hotel booking and management system built on ASP.NET WebFo
 
 **System flow and Entity Relationship Diagram (ERD):**
 https://lucid.app/lucidchart/9a1762ff-58c7-4bc7-8b02-398f0f4fd30d/view
+
 **Project Planning:**
 https://github.com/users/mdnayanmia31/projects/2
 
