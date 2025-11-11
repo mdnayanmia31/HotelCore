@@ -86,4 +86,75 @@ CREATE Table RoomConfigurations(
 	CONSTRAINT CHK_Config_Time CHECK (SetupTimeMinutes >= 0 AND TeardownTimeMinutes >= 0)
 );
 
---
+--Amenities
+CREATE Table Amenities (
+	AmenityID INT PRIMARY KEY IDENTITY(1,1),
+	AmenityName NVARCHAR(100) NOT NULL UNIQUE,
+	Category NVARCHAR(50) NOT NULL,
+	IconClass NVARCHAR(50),
+	IsActive BIT DEFAULT 1,
+	CreatedDate DATETIME2 DEFAULT GETUTCDATE(),
+	CONSTRAINT CHK_Amenities_Catagory CHECK (Category IN('Technology', 'Furniture', 'Service', 'Entertainment', 'Accessibility'))
+);
+
+--Configuration-Amenity junction 
+CREATE Table ConfigurationAmenities (
+	ConfigAmenityID INT PRIMARY KEY IDENTITY(1,1),
+	ConfigID INT NOT NULL,
+	AmenityID INT NOT NULL,
+	Quantity INT DEFAULT 1,
+	CONSTRAINT FK_ConfigAmenities_Config FOREIGN KEY (ConfigID) REFERENCES RoomConfigurations(ConfigID),
+	CONSTRAINT FK_ConfigAmenities_Amenity FOREIGN KEY (AmenityID) REFERENCES Amenities(AmenityID),
+	CONSTRAINT UQ_ConfigAmenity UNIQUE (ConfigID, AmenityID)
+);
+
+/*BOOKING & PRICING*/
+
+--Bookings
+CREATE TABLE Bookings(
+	BookingID INT PRIMARY KEY IDENTITY(1,1),
+	BookingReference NVARCHAR(20) NOT NULL UNIQUE,
+	UserID INT NOT NULL,
+	RoomID INT NOT NULL,
+	ConfigID INT,
+	StartDateTime DATETIME2 NOT NULL,
+	EndDateTime DATETIME2 NOT NULL,
+	TotalAmount DECIMAL(10,2) NOT NULL,
+	DepositAmount DECIMAL(10,2) DEFAULT 0,
+	Status NVARCHAR(20) NOT NULL DEFAULT 'Pending',
+	GuestCount INT DEFAULT 1,
+	AdultCount INT DEFAULT 1,
+	ChildCount INT DEFAULT 0,
+	InfantCount INT DEFAULT 0,
+	SpecialRequests NVARCHAR(1000),
+	CheckInDateTime DATETIME2,
+	CheckOutDateTime DATETIME2,
+	CreateDate DATETIME2 DEFAULT GETUTCDATE(),
+	ModifiedDate DATETIME2 DEFAULT GETUTCDATE(),
+	CancelledDate DATETIME2,
+	CancellationReason NVARCHAR(500),
+	CONSTRAINT FK_Bookings_Users FOREIGN KEY (UserID) References Users(UserID),
+	CONSTRAINT FK_Bookings_Rooms FOREIGN KEY (RoomID) REFERENCES Rooms(RoomID),
+	CONSTRAINT FK_Bookings_Config FOREIGN KEY (ConfigID) REFERENCES RoomConfigurations (ConfigID),
+	CONSTRAINT CHK_Bookings_DateTime CHECK (EndDateTime > StartDateTime), 
+	CONSTRAINT CHK_Bookings_Status CHECK (Status IN ('Pending', 'Confirmed', 'CheckedIn', 'CheckedOut', 'Cancelled', 'NoShow')),
+	CONSTRAINT CHK_Bookings_Amount CHECK (TotalAmount >= 0 AND DepositAmount >= 0)
+);
+
+--Booking Slots
+Create Table BookingSlots (
+	SlotID  INT PRIMARY KEY IDENTITY(1,1),
+	BookingID INT NOT NULL,
+	RoomID INT NOT NULL,
+	StartDateTime DATETIME2 NOT NULL,
+	EndDateTime DATETIME2 NOT NULL,
+	HourlyRate DECIMAL (10,2),
+	DailyRate DECIMAL (10,2),
+	SlotAmount DECIMAL (10,2) NOT NUll,
+	CONSTRAINT FK_BookingSlots_Booking FOREIGN KEY (BookingID) REFERENCES Bookings(BookingID) ON DELETE CASCADE,
+	CONSTRAINT FK_BookingSlots_Room FOREIGN KEY (RoomID) REFERENCES Rooms(RoomID),
+	CONSTRAINT CHK_Slots_DateTime CHECK (EndDateTime > StartDateTime),
+	CONSTRAINT CHK_Slots_Amount CHECK (SlotAmount >= 0)
+);
+
+--Booking Guests
