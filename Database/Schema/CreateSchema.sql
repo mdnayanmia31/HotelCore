@@ -490,6 +490,7 @@ CREATE NONCLUSTERED INDEX IX_Bookings_UserStatus
 CREATE NONCLUSTERED INDEX IX_Bookings_RoomDateTime
        ON Bookings(RoomID, StartDateTime, EndDateTime)
        INCLUDE (Status, UserID);
+
 CREATE NONCLUSTERED INDEX IX_Bookings_CreatedBy
 	   ON Bookings(CreatedBy, CreatedDate)
 	   INCLUDE (BookingID, Status);
