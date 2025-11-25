@@ -1,0 +1,57 @@
+﻿.header-section {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.hotelcore-nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.nav-left, .nav-right {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.nav-right {
+    justify-content: flex-end;
+}
+
+.nav-center {
+    flex: 0 0 auto;
+    margin: 0 30px;
+}
+
+.logo img {
+    max-height: 80px;
+}
+
+.mainmenu ul li a {
+    font-family: 'Cabin', sans-serif;
+    font-size: 14px;
+    color: #19191a;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 15px;
+}
+
+.bk-btn {
+    background: #dfa974;
+    color: #fff;
+    padding: 12px 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+
+.wizard-step-active {
+    border-bottom: 3px solid #dfa974;
+    color: #19191a;
+    font-weight: 700;
+}
