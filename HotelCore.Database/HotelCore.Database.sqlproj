@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>HotelCore.Database</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{5eae6b57-a4c5-4c53-afc7-c4e536e60bd5}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql160DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>HotelCore.Database</RootNamespace>
+    <AssemblyName>HotelCore.Database</AssemblyName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+    <DefaultCollation>Latin1_General_CI_AS</DefaultCollation>
+    <DefaultFilegroup>PRIMARY</DefaultFilegroup>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Stored Procedures\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\ConfigurationAmenities.sql" />
+    <Build Include="dbo\Tables\Payments.sql" />
+    <Build Include="dbo\Tables\Bookings.sql" />
+    <Build Include="dbo\Tables\AuditLog.sql" />
+    <Build Include="dbo\Tables\BookingSlots.sql" />
+    <Build Include="dbo\Tables\BookingGuests.sql" />
+    <Build Include="dbo\Tables\BookingReservations.sql" />
+    <Build Include="dbo\Tables\DynamicPricingStrategies.sql" />
+    <Build Include="dbo\Tables\PricingHistory.sql" />
+    <Build Include="dbo\Tables\Roles.sql" />
+    <Build Include="dbo\Tables\UpsellRules.sql" />
+    <Build Include="dbo\Tables\Users.sql" />
+    <Build Include="dbo\Tables\UpsellOffers.sql" />
+    <Build Include="dbo\Tables\Staff.sql" />
+    <Build Include="dbo\Tables\RoomTypes.sql" />
+    <Build Include="dbo\Tables\StaffSchedule.sql" />
+    <Build Include="dbo\Tables\Rooms.sql" />
+    <Build Include="dbo\Tables\HousekeepingTasks.sql" />
+    <Build Include="dbo\Tables\RoomConfigurations.sql" />
+    <Build Include="dbo\Tables\Amenities.sql" />
+    <Build Include="dbo\Tables\GuestTimelineEvents.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Booking_Create.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Booking_GetUpsells.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Booking_CheckIn.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Booking_Cancel.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Booking_GetTimeline.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Booking_GetByUser.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Booking_GetByID.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Booking_CheckOut.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Reservation_Create.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Reservation_ConvertToBooking.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Reservation_ExpireOld.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Room_Search.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Room_CheckAvailability.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Room_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Room_Update.sql" />
+    <Build Include="dbo\Stored Procedures\sp_RoomType_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\sp_User_Create.sql" />
+    <Build Include="dbo\Stored Procedures\sp_User_Authenticate.sql" />
+    <Build Include="dbo\Stored Procedures\sp_User_UpdateProfile.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Payment_Create.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Payment_ProcessRefund.sql" />
+    <Build Include="dbo\Stored Procedures\sp_HousekeepingTask_Assign.sql" />
+    <Build Include="dbo\Stored Procedures\sp_HousekeepingTask_UpdateStatus.sql" />
+    <Build Include="dbo\Stored Procedures\sp_HousekeepingTask_GetByStaff.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Staff_GetSchedule.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Pricing_Calculate.sql" />
+    <Build Include="dbo\Stored Procedures\sp_TimelineEvent_Add.sql" />
+    <Build Include="dbo\Stored Procedures\sp_UpsellOffer_Accept.sql" />
+    <Build Include="dbo\Stored Procedures\sp_BookingGuest_Add.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Report_GetOccupancy.sql" />
+    <Build Include="dbo\Stored Procedures\sp_Report_GenerateRevenue.sql" />
+  </ItemGroup>
+</Project>
