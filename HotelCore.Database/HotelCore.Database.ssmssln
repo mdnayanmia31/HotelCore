@@ -3,15 +3,110 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # SQL Server Management Studio Solution File, Format Version 20.00
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Schema", "Schema", "{F98FA0E5-FFD6-4300-A743-371BC3917CF0}"
+	ProjectSection(SolutionItems) = preProject
+		Schema\CreateSchema.sql = Schema\CreateSchema.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StoredProcedures", "StoredProcedures", "{C700C9DC-9A7F-409A-BACE-91D839CEC6C2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01_Booking", "01_Booking", "{2EAF8A2F-134D-421D-B3E0-A84AC38B3DD2}"
+	ProjectSection(SolutionItems) = preProject
+		StoredProcedures\01_Booking\sp_Booking_Cancel.sql = StoredProcedures\01_Booking\sp_Booking_Cancel.sql
+		StoredProcedures\01_Booking\sp_Booking_CheckIn.sql = StoredProcedures\01_Booking\sp_Booking_CheckIn.sql
+		StoredProcedures\01_Booking\sp_Booking_CheckOut.sql = StoredProcedures\01_Booking\sp_Booking_CheckOut.sql
+		StoredProcedures\01_Booking\sp_Booking_Create.sql = StoredProcedures\01_Booking\sp_Booking_Create.sql
+		StoredProcedures\01_Booking\sp_Booking_GetById.sql = StoredProcedures\01_Booking\sp_Booking_GetById.sql
+		StoredProcedures\01_Booking\sp_Booking_GetByUser.sql = StoredProcedures\01_Booking\sp_Booking_GetByUser.sql
+		StoredProcedures\01_Booking\sp_Booking_GetTimeline.sql = StoredProcedures\01_Booking\sp_Booking_GetTimeline.sql
+		StoredProcedures\01_Booking\sp_Booking_GetUpsells.sql = StoredProcedures\01_Booking\sp_Booking_GetUpsells.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02_Reservation", "02_Reservation", "{BC7E8B28-E5E1-496D-9639-77F94B3C33C3}"
+	ProjectSection(SolutionItems) = preProject
+		StoredProcedures\02_Reservation\sp_Reservation_ConvertToBooking.sql = StoredProcedures\02_Reservation\sp_Reservation_ConvertToBooking.sql
+		StoredProcedures\02_Reservation\sp_Reservation_Create.sql = StoredProcedures\02_Reservation\sp_Reservation_Create.sql
+		StoredProcedures\02_Reservation\sp_Reservation_ExpireOld.sql = StoredProcedures\02_Reservation\sp_Reservation_ExpireOld.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03_Room", "03_Room", "{1B563AA1-FD5C-4B50-8997-4AC342BDA2B7}"
+	ProjectSection(SolutionItems) = preProject
+		StoredProcedures\03_Room\sp_Room_CheckAvailability.sql = StoredProcedures\03_Room\sp_Room_CheckAvailability.sql
+		StoredProcedures\03_Room\sp_Room_GetById.sql = StoredProcedures\03_Room\sp_Room_GetById.sql
+		StoredProcedures\03_Room\sp_Room_Search.sql = StoredProcedures\03_Room\sp_Room_Search.sql
+		StoredProcedures\03_Room\sp_Room_Update.sql = StoredProcedures\03_Room\sp_Room_Update.sql
+		StoredProcedures\03_Room\sp_RoomType_GetAll.sql = StoredProcedures\03_Room\sp_RoomType_GetAll.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04_User", "04_User", "{482C7E04-3644-4B1B-83C7-51DACE9C7880}"
+	ProjectSection(SolutionItems) = preProject
+		StoredProcedures\04_User\sp_User_Authenticate.sql = StoredProcedures\04_User\sp_User_Authenticate.sql
+		StoredProcedures\04_User\sp_User_Create.sql = StoredProcedures\04_User\sp_User_Create.sql
+		StoredProcedures\04_User\sp_User_UpdateProfile.sql = StoredProcedures\04_User\sp_User_UpdateProfile.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05_Payment", "05_Payment", "{D92B9B52-B51E-4AB5-B1A0-8E6037038F00}"
+	ProjectSection(SolutionItems) = preProject
+		StoredProcedures\05_Payment\sp_Payment_Create.sql = StoredProcedures\05_Payment\sp_Payment_Create.sql
+		StoredProcedures\05_Payment\sp_Payment_ProcessRefund.sql = StoredProcedures\05_Payment\sp_Payment_ProcessRefund.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06_Housekeeping", "06_Housekeeping", "{4785AB35-0C8C-4175-8F81-2F274AF492E9}"
+	ProjectSection(SolutionItems) = preProject
+		StoredProcedures\06_Housekeeping\sp_HousekeepingTask_Assign.sql = StoredProcedures\06_Housekeeping\sp_HousekeepingTask_Assign.sql
+		StoredProcedures\06_Housekeeping\sp_HousekeepingTask_GetByStaff.sql = StoredProcedures\06_Housekeeping\sp_HousekeepingTask_GetByStaff.sql
+		StoredProcedures\06_Housekeeping\sp_HousekeepingTask_UpdateStatus.sql = StoredProcedures\06_Housekeeping\sp_HousekeepingTask_UpdateStatus.sql
+		StoredProcedures\06_Housekeeping\sp_Staff_GetSchedule.sql = StoredProcedures\06_Housekeeping\sp_Staff_GetSchedule.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "07_Pricing", "07_Pricing", "{973F3E8C-F1EC-4CD1-A7DB-8E3399F33497}"
+	ProjectSection(SolutionItems) = preProject
+		StoredProcedures\07_Pricing\sp_Pricing_Calculate.sql = StoredProcedures\07_Pricing\sp_Pricing_Calculate.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "08_Timeline", "08_Timeline", "{1DDF9B12-9243-4724-8C6D-437A483CAF02}"
+	ProjectSection(SolutionItems) = preProject
+		StoredProcedures\08_Timeline\sp_TimelineEvent_Add.sql = StoredProcedures\08_Timeline\sp_TimelineEvent_Add.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "09_Upsell", "09_Upsell", "{67479798-2EFD-448B-9AF9-C7DA4525D819}"
+	ProjectSection(SolutionItems) = preProject
+		StoredProcedures\09_Upsell\sp_UpsellOffer_Accept.sql = StoredProcedures\09_Upsell\sp_UpsellOffer_Accept.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "10_Guest", "10_Guest", "{8E3F2817-2212-4F19-B395-A1F1F5A875DB}"
+	ProjectSection(SolutionItems) = preProject
+		StoredProcedures\10_Guest\sp_BookingGuest_Add.sql = StoredProcedures\10_Guest\sp_BookingGuest_Add.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "11_Reports", "11_Reports", "{50BA10AD-BB91-417B-A1EC-74A1961D9F01}"
+	ProjectSection(SolutionItems) = preProject
+		StoredProcedures\11_Reports\sp_Report_GenerateRevenue.sql = StoredProcedures\11_Reports\sp_Report_GenerateRevenue.sql
+		StoredProcedures\11_Reports\sp_Report_GetOccupancy.sql = StoredProcedures\11_Reports\sp_Report_GetOccupancy.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Default|Default = Default|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1C78BBDB-3865-4C0F-8192-CAB5E3A008BE}.Default|Default.ActiveCfg = Default
+		{2F0D31B2-7170-4F48-BFBA-17447C441B49}.Default|Default.ActiveCfg = Default
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2EAF8A2F-134D-421D-B3E0-A84AC38B3DD2} = {C700C9DC-9A7F-409A-BACE-91D839CEC6C2}
+		{BC7E8B28-E5E1-496D-9639-77F94B3C33C3} = {C700C9DC-9A7F-409A-BACE-91D839CEC6C2}
+		{1B563AA1-FD5C-4B50-8997-4AC342BDA2B7} = {C700C9DC-9A7F-409A-BACE-91D839CEC6C2}
+		{482C7E04-3644-4B1B-83C7-51DACE9C7880} = {C700C9DC-9A7F-409A-BACE-91D839CEC6C2}
+		{D92B9B52-B51E-4AB5-B1A0-8E6037038F00} = {C700C9DC-9A7F-409A-BACE-91D839CEC6C2}
+		{4785AB35-0C8C-4175-8F81-2F274AF492E9} = {C700C9DC-9A7F-409A-BACE-91D839CEC6C2}
+		{973F3E8C-F1EC-4CD1-A7DB-8E3399F33497} = {C700C9DC-9A7F-409A-BACE-91D839CEC6C2}
+		{1DDF9B12-9243-4724-8C6D-437A483CAF02} = {C700C9DC-9A7F-409A-BACE-91D839CEC6C2}
+		{67479798-2EFD-448B-9AF9-C7DA4525D819} = {C700C9DC-9A7F-409A-BACE-91D839CEC6C2}
+		{8E3F2817-2212-4F19-B395-A1F1F5A875DB} = {C700C9DC-9A7F-409A-BACE-91D839CEC6C2}
+		{50BA10AD-BB91-417B-A1EC-74A1961D9F01} = {C700C9DC-9A7F-409A-BACE-91D839CEC6C2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E09CC469-D7D0-4156-B532-2D4BB9B295B1}
