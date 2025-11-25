@@ -1,0 +1,26 @@
+﻿CREATE TABLE [dbo].[UpsellRules] (
+    [RuleID]            INT             IDENTITY (1, 1) NOT NULL,
+    [RuleName]          NVARCHAR (100)  NOT NULL,
+    [Description]       NVARCHAR (500)  NULL,
+    [TriggerType]       NVARCHAR (50)   NOT NULL,
+    [TriggerCondition]  NVARCHAR (500)  NULL,
+    [UpsellTitle]       NVARCHAR (200)  NOT NULL,
+    [UpsellDescription] NVARCHAR (1000) NULL,
+    [UpsellAmount]      DECIMAL (10, 2) NOT NULL,
+    [DiscountPercent]   DECIMAL (5, 2)  DEFAULT ((0)) NULL,
+    [Priority]          INT             DEFAULT ((10)) NULL,
+    [IsActive]          BIT             DEFAULT ((1)) NULL,
+    [CreatedBy]         INT             NULL,
+    [CreatedDate]       DATETIME2 (7)   DEFAULT (getutcdate()) NULL,
+    [ModifiedBy]        INT             NULL,
+    [ModifiedDate]      DATETIME2 (7)   DEFAULT (getutcdate()) NULL,
+    [TargetAudience]    NVARCHAR (50)   NULL,
+    PRIMARY KEY CLUSTERED ([RuleID] ASC),
+    CONSTRAINT [CHK_Upsell_Amount] CHECK ([UpsellAmount]>=(0)),
+    CONSTRAINT [CHK_Upsell_Discount] CHECK ([DiscountPercent]>=(0) AND [DiscountPercent]<=(100)),
+    CONSTRAINT [CHK_Upsell_TriggerType] CHECK ([TriggerType]='DayOfWeek' OR [TriggerType]='Occupancy' OR [TriggerType]='StayDuration' OR [TriggerType]='RoomType' OR [TriggerType]='BookingTime'),
+    CONSTRAINT [FK_UpsellRules_CreatedBy] FOREIGN KEY ([CreatedBy]) REFERENCES [dbo].[Users] ([UserID]),
+    CONSTRAINT [FK_UpsellRules_ModifiedBy] FOREIGN KEY ([ModifiedBy]) REFERENCES [dbo].[Users] ([UserID]),
+    UNIQUE NONCLUSTERED ([RuleName] ASC)
+);
+
