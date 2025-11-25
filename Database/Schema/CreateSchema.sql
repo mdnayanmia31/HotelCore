@@ -326,6 +326,7 @@ CREATE TABLE UpsellRules(
 	CreatedDate DATETIME2 DEFAULT GETUTCDATE(),
 	ModifiedBy INT NULL,
 	ModifiedDate DATETIME2 DEFAULT GETUTCDATE(),
+	TargetAudience NVARCHAR(50), -- 'Family', 'Couple', 'Solo', 'All'
 	CONSTRAINT FK_UpsellRules_CreatedBy FOREIGN KEY (CreatedBy) REFERENCES Users(UserID),
 	CONSTRAINT FK_UpsellRules_ModifiedBy FOREIGN KEY (ModifiedBy) REFERENCES Users(UserID),
     CONSTRAINT CHK_Upsell_TriggerType CHECK (TriggerType IN ('BookingTime', 'RoomType', 'StayDuration', 'Occupancy', 'DayOfWeek')),
