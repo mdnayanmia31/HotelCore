@@ -1,42 +1,19 @@
-# Visual Studio IDE
+## Visual Studio ##
 .vs/
+[Bb]in/
+[Oo]bj/
 *.user
 *.suo
-*.userosscache
+*.userprefs
 *.sln.docstates
-bin/
-obj/
-packages/
-*.cache
 
-# Web.config
-Web.config
-App_Data/*.mdf
-App_Data/*.ldf
-
-# Logs
-*.logs
-ErrorLog.txt
-
-# OS files
+# Windows image file caches
 Thumbs.db
+ehthumbs.db
+
+# Folder config file
 Desktop.ini
-.DS_Store
 
-# Publish profiles with credentials
-*.pubxml
-*.pubxml.user
-
-# NuGet
-*.nupkg
-**/packages/*
-!**/pakcages/build/
-
-# SQL Server files
-*.mdf
-*.ldf
-*.ndf
-
-# Backup files
-*.bak
-*~
+# Other
+packages/
+TestResults/
