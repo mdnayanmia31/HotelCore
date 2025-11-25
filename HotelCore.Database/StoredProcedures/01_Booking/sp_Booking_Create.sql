@@ -1,3 +1,6 @@
+USE HotelCore;
+GO
+
 -- SP : Create Booking
 CREATE OR ALTER PROCEDURE sp_Booking_Create
     @UserID INT,

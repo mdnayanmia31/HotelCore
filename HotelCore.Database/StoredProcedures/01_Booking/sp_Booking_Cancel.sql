@@ -1,4 +1,8 @@
---SP2: Cancel Booking
+USE HotelCore;
+GO
+
+--SP: Cancel Booking
+
 CREATE OR ALTER PROCEDURE sp_Booking_Cancel
     @BookingID INT,
     @CancellationReason NVARCHAR(500),
