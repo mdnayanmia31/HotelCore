@@ -13,4 +13,41 @@ Option Explicit On
 
 
 Partial Public Class _Default
+
+    '''<summary>
+    '''txtCheckIn control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtCheckIn As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''txtCheckOut control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtCheckOut As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''ddlGuests control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ddlGuests As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''btnCheckAvailability control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnCheckAvailability As Global.System.Web.UI.WebControls.Button
+
 End Class

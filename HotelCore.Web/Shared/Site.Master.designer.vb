@@ -32,6 +32,15 @@ Partial Public Class Site1
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
+    '''lnkLogout control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents lnkLogout As Global.System.Web.UI.WebControls.LinkButton
+
+    '''<summary>
     '''ContentPlaceHolder1 control.
     '''</summary>
     '''<remarks>
@@ -39,4 +48,31 @@ Partial Public Class Site1
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ContentPlaceHolder1 As Global.System.Web.UI.WebControls.ContentPlaceHolder
+
+    '''<summary>
+    '''txtNewsletter control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtNewsletter As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''btnSubscribe control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnSubscribe As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''ScriptsPlaceHolder control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents ScriptsPlaceHolder As Global.System.Web.UI.WebControls.ContentPlaceHolder
 End Class

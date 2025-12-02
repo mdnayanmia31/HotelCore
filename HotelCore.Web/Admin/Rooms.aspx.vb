@@ -112,10 +112,10 @@ Public Class Rooms
             End If
 
             ' Update stats
-            litAvailable.Text = rooms.Count(Function(r) r.Status = "Available").ToString()
-            litOccupied.Text = rooms.Count(Function(r) r.Status = "Occupied").ToString()
-            litCleaning.Text = rooms.Count(Function(r) r.Status = "Cleaning").ToString()
-            litMaintenance.Text = rooms.Count(Function(r) r.Status = "Maintenance").ToString()
+            litAvailable.Text = rooms.Where(Function(r) r.Status = "Available").Count().ToString()
+            litOccupied.Text = rooms.Where(Function(r) r.Status = "Occupied").Count().ToString()
+            litCleaning.Text = rooms.Where(Function(r) r.Status = "Cleaning").Count().ToString()
+            litMaintenance.Text = rooms.Where(Function(r) r.Status = "Maintenance").Count().ToString()
 
             If filteredRooms.Count > 0 Then
                 rptRooms.DataSource = filteredRooms
