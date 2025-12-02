@@ -1,6 +1,5 @@
 Imports System.Web.Security
 Imports HotelCore.BLL
-Imports HotelCore.BLL.Models
 
 Public Class Login
     Inherits System.Web.UI.Page

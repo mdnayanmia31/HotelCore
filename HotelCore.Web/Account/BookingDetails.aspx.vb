@@ -1,5 +1,4 @@
 Imports HotelCore.BLL
-Imports HotelCore.BLL.Models
 
 Public Class BookingDetails
     Inherits System.Web.UI.Page
