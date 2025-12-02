@@ -1,6 +1,6 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
-
+Imports HotelCore.DAL.HotelCore.DAL
 Public Class BookingRepository
     Implements IBookingRepository
 

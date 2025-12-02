@@ -1,4 +1,5 @@
 ﻿Imports System.Data
+Imports HotelCore.DAL.HotelCore.DAL
 Public Interface IBookingRepository
     Function SearchRooms(startDateTime As DateTime, endDateTime As DateTime,
                         configID As Integer?, minOccupancy As Integer,

@@ -3,6 +3,7 @@
 Imports System.Data
 Imports System.Transactions
 Imports HotelCore.DAL
+Imports HotelCore.DAL.HotelCore.DAL
 
 
 Public Class BookingService
@@ -183,7 +184,12 @@ Public Class BookingService
                 End Try
             End Using
 
-            Return result
+        Catch ex As Exception
+            result.Success = False
+            result.ErrorMessage = $"Error creating booking: {ex.Message}"
+        End Try
+
+        Return result
     End Function
 
     ''' Get booking details by ID

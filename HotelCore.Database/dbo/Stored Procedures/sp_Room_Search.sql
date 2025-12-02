@@ -22,7 +22,7 @@ BEGIN
     SELECT DISTINCT r.RoomID,
                     r.RoomNumber,
                     r.FloorNumber,
-                    rt.Typename,
+                    rt.TypeName,
                     rt.Description,
                     rt.MaxOccupancy,
                     rt.SquareFeet,
