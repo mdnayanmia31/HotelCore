@@ -1,42 +1,44 @@
-# Visual Studio IDE
-.vs/
-*.user
+# Visual Studio 
+*.vspscc
+*.vssscc
 *.suo
+*.user
 *.userosscache
 *.sln.docstates
-bin/
-obj/
-packages/
-*.cache
+*.pdb
+*.obj
+*.aps
+*.dbmdl
+*.jfm
 
-# Web.config
-Web.config
-App_Data/*.mdf
-App_Data/*.ldf
+# Visual Studio Cache 
+.vs/
 
-# Logs
-*.logs
-ErrorLog.txt
-
-# OS files
-Thumbs.db
-Desktop.ini
-.DS_Store
-
-# Publish profiles with credentials
-*.pubxml
-*.pubxml.user
-
-# NuGet
-*.nupkg
-**/packages/*
-!**/pakcages/build/
-
-# SQL Server files
-*.mdf
-*.ldf
-*.ndf
-
-# Backup files
+# Binaries and Object Files
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+*.dll
+*.exe
+*.log
 *.bak
-*~
+*.ncb
+*.sbr
+*.ilk
+*.lib
+*.o
+
+# NuGet Packages
+packages/
+*.nupkg
+
+# IIS Express files
+*.vshost.*
+app_offline.htm
+
+# Generated source files for Web Forms
+*.designer.vb
+
+# Hide Windows temporary files
+Thumbs.db

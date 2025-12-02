@@ -10,69 +10,71 @@
 Option Strict On
 Option Explicit On
 
+Namespace Site
 
-Partial Public Class Site1
+    Partial Public Class Master
 
-    '''<summary>
-    '''head control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents head As Global.System.Web.UI.WebControls.ContentPlaceHolder
+        '''<summary>
+        '''head control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents head As Global.System.Web.UI.WebControls.ContentPlaceHolder
 
-    '''<summary>
-    '''form1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
+        '''<summary>
+        '''form1 control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
-    '''<summary>
-    '''lnkLogout control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents lnkLogout As Global.System.Web.UI.WebControls.LinkButton
+        '''<summary>
+        '''lnkLogout control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents lnkLogout As Global.System.Web.UI.WebControls.LinkButton
 
-    '''<summary>
-    '''ContentPlaceHolder1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents ContentPlaceHolder1 As Global.System.Web.UI.WebControls.ContentPlaceHolder
+        '''<summary>
+        '''ContentPlaceHolder1 control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents ContentPlaceHolder1 As Global.System.Web.UI.WebControls.ContentPlaceHolder
 
-    '''<summary>
-    '''txtNewsletter control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtNewsletter As Global.System.Web.UI.WebControls.TextBox
+        '''<summary>
+        '''txtNewsletter control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents txtNewsletter As Global.System.Web.UI.WebControls.TextBox
 
-    '''<summary>
-    '''btnSubscribe control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnSubscribe As Global.System.Web.UI.WebControls.Button
+        '''<summary>
+        '''btnSubscribe control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents btnSubscribe As Global.System.Web.UI.WebControls.Button
 
-    '''<summary>
-    '''ScriptsPlaceHolder control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents ScriptsPlaceHolder As Global.System.Web.UI.WebControls.ContentPlaceHolder
-End Class
+        '''<summary>
+        '''ScriptsPlaceHolder control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents ScriptsPlaceHolder As Global.System.Web.UI.WebControls.ContentPlaceHolder
+    End Class
+End Namespace

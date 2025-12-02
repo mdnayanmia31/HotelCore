@@ -185,8 +185,6 @@
     <Content Include="Scripts\jquery.slicknav.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\owl.carousel.min.js" />
-    <Content Include="Site.Mobile.Master.cs" />
-    <Content Include="Site.Mobile.Master.designer.cs" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="ViewSwitcher.ascx.cs" />
     <Content Include="ViewSwitcher.ascx.designer.cs" />
@@ -321,6 +319,13 @@
     </Compile>
     <Compile Include="Admin\Rooms.aspx.designer.vb">
       <DependentUpon>Rooms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.vb">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.vb">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
