@@ -20,7 +20,7 @@ cd HotelCore
 ### 2. Database Setup
 
 1. Open SQL Server Management Studio (SSMS)
-2. Create a new database named `HotelCoreDB`
+2. Create a new database named `HotelCore`
 3. Execute the stored procedures from `HotelCore.Database/dbo/Stored Procedures/` folder
 4. Execute the table scripts from `HotelCore.Database/dbo/Tables/` folder
 
@@ -48,7 +48,7 @@ Replace `YOUR_SERVER` with your SQL Server instance name (e.g., `localhost`, `.\
 
 ## Default Credentials
 
-For testing purposes, you may need to create the following users in the database:
+For testing purposes:
 
 **Admin User:**
 - Email: admin@hotelcore.com
