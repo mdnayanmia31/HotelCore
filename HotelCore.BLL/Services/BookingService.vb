@@ -176,7 +176,7 @@ Public Class BookingService
             End Using
 
             Return result
-End Function
+    End Function
 
     ''' Get booking details by ID
     Public Function GetBookingById(bookingID As Integer, currentUserID As Integer?) As OperationResult(Of BookingModel)

@@ -206,6 +206,60 @@
     <Compile Include="Shared\Site.Master.vb">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
+    <Compile Include="App_Start\BundleConfig.vb" />
+    <Compile Include="App_Start\RouteConfig.vb" />
+    <Compile Include="Facilities.aspx.vb">
+      <DependentUpon>Facilities.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.vb">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.vb">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Account\Profile.aspx.vb">
+      <DependentUpon>Profile.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Account\BookingDetails.aspx.vb">
+      <DependentUpon>BookingDetails.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Booking\Search.aspx.vb">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Booking\RoomDetails.aspx.vb">
+      <DependentUpon>RoomDetails.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Booking\Checkout.aspx.vb">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Booking\Confirmation.aspx.vb">
+      <DependentUpon>Confirmation.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Dashboard.aspx.vb">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Bookings.aspx.vb">
+      <DependentUpon>Bookings.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Rooms.aspx.vb">
+      <DependentUpon>Rooms.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -238,6 +292,20 @@
     </None>
     <None Include="packages.config" />
     <Content Include="Shared\Site.Master" />
+    <Content Include="Facilities.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <Content Include="Account\Profile.aspx" />
+    <Content Include="Account\BookingDetails.aspx" />
+    <Content Include="Booking\Search.aspx" />
+    <Content Include="Booking\RoomDetails.aspx" />
+    <Content Include="Booking\Checkout.aspx" />
+    <Content Include="Booking\Confirmation.aspx" />
+    <Content Include="Admin\Dashboard.aspx" />
+    <Content Include="Admin\Bookings.aspx" />
+    <Content Include="Admin\Rooms.aspx" />
+    <Content Include="Content\css\Site.css" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -246,9 +314,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Account\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Booking\" />
+    <Folder Include="App_Start\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>

@@ -2,18 +2,200 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="en">
 <head runat="server">
-    <title></title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="HotelCore - Your Premier Hotel Booking Experience" />
+    <meta name="author" content="HotelCore" />
+    <title>HotelCore - Luxury Hotel Booking</title>
+    
+    <!-- Google Fonts - Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- CSS Files -->
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/elegant-icons.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/flaticon.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/nice-select.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/magnific-popup.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/slicknav.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/HotelCore-custom.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/Site.css" rel="stylesheet" type="text/css" />
+    
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <!-- Header Section -->
+        <header class="hotelcore-header">
+            <div class="container">
+                <nav class="hotelcore-navbar">
+                    <!-- Left Navigation -->
+                    <div class="hotelcore-nav-left">
+                        <a href="<%= ResolveUrl("~/Default.aspx") %>" class="hotelcore-nav-link">Home</a>
+                        <a href="<%= ResolveUrl("~/Booking/Search.aspx") %>" class="hotelcore-nav-link">Rooms</a>
+                        <a href="<%= ResolveUrl("~/Facilities.aspx") %>" class="hotelcore-nav-link">Facilities</a>
+                    </div>
+                    
+                    <!-- Center Logo -->
+                    <div class="hotelcore-nav-center">
+                        <a href="<%= ResolveUrl("~/Default.aspx") %>" class="hotelcore-logo">
+                            <img src="<%= ResolveUrl("~/Content/img/logo.svg") %>" alt="HotelCore Logo" />
+                        </a>
+                    </div>
+                    
+                    <!-- Right Navigation -->
+                    <div class="hotelcore-nav-right">
+                        <a href="<%= ResolveUrl("~/Contact.aspx") %>" class="hotelcore-nav-link">Contact</a>
+                        <% If Session("UserID") IsNot Nothing Then %>
+                            <a href="<%= ResolveUrl("~/Account/Profile.aspx") %>" class="hotelcore-nav-link">My Account</a>
+                            <asp:LinkButton ID="lnkLogout" runat="server" CssClass="hotelcore-nav-link" OnClick="lnkLogout_Click">Logout</asp:LinkButton>
+                        <% Else %>
+                            <a href="<%= ResolveUrl("~/Account/Login.aspx") %>" class="hotelcore-nav-link">Login</a>
+                        <% End If %>
+                        <a href="<%= ResolveUrl("~/Booking/Search.aspx") %>" class="btn-book-now">Book Now</a>
+                    </div>
+                    
+                    <!-- Mobile Menu Toggle -->
+                    <button type="button" class="hotelcore-menu-toggle" id="mobileMenuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </nav>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="hotelcore-mobile-menu" id="mobileMenu">
+                <a href="<%= ResolveUrl("~/Default.aspx") %>" class="hotelcore-nav-link">Home</a>
+                <a href="<%= ResolveUrl("~/Booking/Search.aspx") %>" class="hotelcore-nav-link">Rooms</a>
+                <a href="<%= ResolveUrl("~/Facilities.aspx") %>" class="hotelcore-nav-link">Facilities</a>
+                <a href="<%= ResolveUrl("~/Contact.aspx") %>" class="hotelcore-nav-link">Contact</a>
+                <% If Session("UserID") IsNot Nothing Then %>
+                    <a href="<%= ResolveUrl("~/Account/Profile.aspx") %>" class="hotelcore-nav-link">My Account</a>
+                <% Else %>
+                    <a href="<%= ResolveUrl("~/Account/Login.aspx") %>" class="hotelcore-nav-link">Login</a>
+                    <a href="<%= ResolveUrl("~/Account/Register.aspx") %>" class="hotelcore-nav-link">Register</a>
+                <% End If %>
+                <a href="<%= ResolveUrl("~/Booking/Search.aspx") %>" class="btn-book-now mt-3">Book Now</a>
+            </div>
+        </header>
+        
+        <!-- Main Content -->
+        <main>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
-        </div>
+        </main>
+        
+        <!-- Footer Section -->
+        <footer class="hotelcore-footer">
+            <div class="container">
+                <div class="row">
+                    <!-- About Column -->
+                    <div class="col-lg-4 col-md-6 mb-4">
+                        <div class="hotelcore-footer-logo">
+                            <img src="<%= ResolveUrl("~/Content/img/footer-logo.svg") %>" alt="HotelCore Logo" />
+                        </div>
+                        <p>Experience luxury and comfort at HotelCore. We offer premium accommodations with world-class amenities and exceptional service.</p>
+                        <div class="hotelcore-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Quick Links -->
+                    <div class="col-lg-2 col-md-6 mb-4">
+                        <h5>Quick Links</h5>
+                        <ul class="hotelcore-footer-links">
+                            <li><a href="<%= ResolveUrl("~/Default.aspx") %>">Home</a></li>
+                            <li><a href="<%= ResolveUrl("~/Booking/Search.aspx") %>">Rooms</a></li>
+                            <li><a href="<%= ResolveUrl("~/Facilities.aspx") %>">Facilities</a></li>
+                            <li><a href="<%= ResolveUrl("~/Contact.aspx") %>">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Contact Info -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5>Contact Info</h5>
+                        <ul class="hotelcore-footer-links">
+                            <li><i class="fa fa-map-marker mr-2"></i> 123 Hotel Street, City</li>
+                            <li><i class="fa fa-phone mr-2"></i> +1 234 567 8900</li>
+                            <li><i class="fa fa-envelope mr-2"></i> info@hotelcore.com</li>
+                            <li><i class="fa fa-clock-o mr-2"></i> 24/7 Front Desk</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Newsletter -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5>Newsletter</h5>
+                        <p>Subscribe to receive updates and special offers.</p>
+                        <div class="hotelcore-newsletter">
+                            <div class="input-group">
+                                <asp:TextBox ID="txtNewsletter" runat="server" CssClass="form-control" placeholder="Your Email" />
+                                <div class="input-group-append">
+                                    <asp:Button ID="btnSubscribe" runat="server" Text="Subscribe" CssClass="btn" OnClick="btnSubscribe_Click" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="hotelcore-copyright">
+                <div class="container">
+                    <p>&copy; <%= DateTime.Now.Year %> HotelCore. All Rights Reserved.</p>
+                </div>
+            </div>
+        </footer>
     </form>
+    
+    <!-- JavaScript Files -->
+    <script src="<%= ResolveUrl("~/Scripts/jquery-3.3.1.min.js") %>"></script>
+    <script src="<%= ResolveUrl("~/Scripts/bootstrap.min.js") %>"></script>
+    <script src="<%= ResolveUrl("~/Scripts/jquery-ui.min.js") %>"></script>
+    <script src="<%= ResolveUrl("~/Scripts/jquery.nice-select.min.js") %>"></script>
+    <script src="<%= ResolveUrl("~/Scripts/jquery.magnific-popup.min.js") %>"></script>
+    <script src="<%= ResolveUrl("~/Scripts/owl.carousel.min.js") %>"></script>
+    <script src="<%= ResolveUrl("~/Scripts/jquery.slicknav.js") %>"></script>
+    <script src="<%= ResolveUrl("~/Scripts/main.js") %>"></script>
+    
+    <script type="text/javascript">
+        // Mobile Menu Toggle
+        $(document).ready(function () {
+            $('#mobileMenuToggle').click(function () {
+                $('#mobileMenu').toggleClass('active');
+                $(this).toggleClass('active');
+            });
+
+            // Header scroll effect
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 50) {
+                    $('.hotelcore-header').addClass('scrolled');
+                } else {
+                    $('.hotelcore-header').removeClass('scrolled');
+                }
+            });
+
+            // Date pickers
+            if ($('.datepicker').length) {
+                $('.datepicker').datepicker({
+                    dateFormat: 'mm/dd/yy',
+                    minDate: 0
+                });
+            }
+        });
+    </script>
+    
+    <asp:ContentPlaceHolder ID="ScriptsPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
 </body>
 </html>

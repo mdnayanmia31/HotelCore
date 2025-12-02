@@ -230,10 +230,11 @@ Public Class UserService
     End Function
 
     Private Function GenerateSalt() As String
-        Dim rng As New System.Security.Cryptography.RNGCryptoServiceProvider()
-        Dim saltBytes(31) As Byte
-        rng.GetBytes(saltBytes)
-        Return Convert.ToBase64String(saltBytes)
+        Using rng As New System.Security.Cryptography.RNGCryptoServiceProvider()
+            Dim saltBytes(31) As Byte
+            rng.GetBytes(saltBytes)
+            Return Convert.ToBase64String(saltBytes)
+        End Using
     End Function
 
 End Class
