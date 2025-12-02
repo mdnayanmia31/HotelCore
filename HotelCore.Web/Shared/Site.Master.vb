@@ -24,6 +24,18 @@ Public Class Site1
         Dim email As String = txtNewsletter.Text.Trim()
         
         If Not String.IsNullOrEmpty(email) Then
+            ' Validate email format
+            Try
+                Dim addr = New System.Net.Mail.MailAddress(email)
+                If addr.Address <> email Then
+                    ScriptManager.RegisterStartupScript(Me, Me.GetType(), "NewsletterError", "alert('Please enter a valid email address.');", True)
+                    Return
+                End If
+            Catch
+                ScriptManager.RegisterStartupScript(Me, Me.GetType(), "NewsletterError", "alert('Please enter a valid email address.');", True)
+                Return
+            End Try
+            
             ' In a real implementation, save to database or email service
             txtNewsletter.Text = ""
             ' Show success message via JavaScript

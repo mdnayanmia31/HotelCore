@@ -15,8 +15,11 @@ Public Class Dashboard
 
     Private Sub LoadDashboardData()
         Try
-            ' In a real implementation, these would come from the database
-            ' For now, use placeholder values
+            ' NOTE: These are placeholder values for demonstration purposes.
+            ' In a production environment, replace these with actual BLL service calls:
+            ' - BookingService.GetBookingStatistics()
+            ' - RoomService.GetRoomStatusSummary()
+            ' - PaymentService.GetRevenueReport()
             litTotalBookings.Text = "156"
             litActiveBookings.Text = "24"
             litOccupancy.Text = "72%"

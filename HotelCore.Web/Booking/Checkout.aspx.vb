@@ -198,15 +198,18 @@ Public Class Checkout
                     Dim paymentService As New PaymentService()
                     Dim totalAmount As Decimal = CDec(ViewState("Total"))
                     
+                    ' NOTE: This is a simulated payment for demonstration purposes.
+                    ' In production, integrate with actual payment processors (Stripe, PayPal, etc.)
+                    ' and implement proper payment validation, PCI compliance, and security measures.
                     Dim payment As New PaymentModel With {
                         .BookingID = result.Data.BookingID,
                         .PaymentMethod = ddlPaymentMethod.SelectedValue,
                         .Amount = totalAmount,
-                        .ProcessorTransactionID = Guid.NewGuid().ToString() ' Simulated transaction ID
+                        .ProcessorTransactionID = Guid.NewGuid().ToString() ' Simulated transaction ID for demo
                     }
                     
                     Dim paymentResult = paymentService.ProcessPayment(payment, userID)
-                    ' Note: In production, handle payment failure appropriately
+                    ' In production: Handle payment failures, refunds, and provide appropriate user feedback
                 End If
 
                 ' Redirect to confirmation
