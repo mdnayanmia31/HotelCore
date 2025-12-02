@@ -139,7 +139,7 @@ Public Class BookingService
                     model.BookingID = bookingID
 
                     ' Add the Primary Guest
-                    Dim primaryGuest As New GuestModel With {
+                    Dim primaryGuest As New GuestDto With {
                         .GuestType = "Primary",
                         .FullName = "Primary Guest",
                         .AgeCategory = "Adult"
@@ -151,8 +151,16 @@ Public Class BookingService
                     'Loop through additional guests
                     If model.Guests IsNot Nothing AndAlso model.Guests.Count > 0 Then
                         For Each guest As GuestModel In model.Guests
-                            guest.GuestType = "Additional" ' Force type
-                            _bookingRepo.AddGuest(bookingID, guest, currentUserID, errorCode, errorMessage)
+                            ' Convert GuestModel to GuestDto for DAL
+                            Dim guestDto As New GuestDto With {
+                                .GuestID = guest.GuestID,
+                                .FullName = guest.FullName,
+                                .Email = guest.Email,
+                                .Phone = guest.Phone,
+                                .GuestType = "Additional",
+                                .AgeCategory = guest.AgeCategory
+                            }
+                            _bookingRepo.AddGuest(bookingID, guestDto, currentUserID, errorCode, errorMessage)
 
                             If errorCode <> 0 Then
                                 ' This Throw will trigger the Catch block, which exits the Using scope

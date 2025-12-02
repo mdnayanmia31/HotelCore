@@ -73,7 +73,7 @@ Public Class BookingRepository
 
 
 
-    Public Function AddGuest(bookingID As Integer, guest As GuestModel, currentUserID As Integer,
+    Public Function AddGuest(bookingID As Integer, guest As GuestDto, currentUserID As Integer,
                          ByRef errorCode As Integer, ByRef errorMessage As String) As Integer Implements IBookingRepository.AddGuest
 
         Dim parameters As New List(Of SqlParameter) From {

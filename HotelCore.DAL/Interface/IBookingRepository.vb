@@ -14,7 +14,7 @@ Public Interface IBookingRepository
                           specialRequests As String, currentUserID As Integer,
                           ByRef errorCode As Integer, ByRef errorMessage As String) As Integer
 
-    Function AddGuest(bookingID As Integer, guest As GuestModel, currentUserID As Integer,
+    Function AddGuest(bookingID As Integer, guest As GuestDto, currentUserID As Integer,
                  ByRef errorCode As Integer, ByRef errorMessage As String) As Integer
 
     Function CancelBooking(bookingID As Integer, cancellationReason As String,
