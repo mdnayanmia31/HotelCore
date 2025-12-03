@@ -10,60 +10,62 @@
 Option Strict On
 Option Explicit On
 
-Partial Public Class BookingDetails
+Namespace Account
+    Partial Public Class BookingDetails
 
-    Protected WithEvents pnlError As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlError As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents litError As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litError As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents pnlSuccess As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlSuccess As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents litSuccess As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litSuccess As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents pnlBookingDetails As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlBookingDetails As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents litStatus As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litStatus As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litBookingRef As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litBookingRef As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litRoomType As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litRoomType As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litRoomNumber As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litRoomNumber As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litBookingDate As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litBookingDate As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litCheckIn As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litCheckIn As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litCheckOut As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litCheckOut As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litGuests As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litGuests As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litTotal As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litTotal As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents pnlGuests As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlGuests As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents rptGuests As Global.System.Web.UI.WebControls.Repeater
+        Protected WithEvents rptGuests As Global.System.Web.UI.WebControls.Repeater
 
-    Protected WithEvents pnlPayments As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlPayments As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents rptPayments As Global.System.Web.UI.WebControls.Repeater
+        Protected WithEvents rptPayments As Global.System.Web.UI.WebControls.Repeater
 
-    Protected WithEvents pnlCanCancel As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlCanCancel As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents btnCancelBooking As Global.System.Web.UI.WebControls.Button
+        Protected WithEvents btnCancelBooking As Global.System.Web.UI.WebControls.Button
 
-    Protected WithEvents pnlCancellationInfo As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlCancellationInfo As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents litCancelledDate As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litCancelledDate As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litCancellationReason As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litCancellationReason As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents pnlCancelForm As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlCancelForm As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents txtCancellationReason As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtCancellationReason As Global.System.Web.UI.WebControls.TextBox
 
-    Protected WithEvents btnConfirmCancel As Global.System.Web.UI.WebControls.Button
+        Protected WithEvents btnConfirmCancel As Global.System.Web.UI.WebControls.Button
 
-    Protected WithEvents btnCancelCancelation As Global.System.Web.UI.WebControls.Button
+        Protected WithEvents btnCancelCancelation As Global.System.Web.UI.WebControls.Button
 
-End Class
+    End Class
+End Namespace

@@ -10,28 +10,30 @@
 Option Strict On
 Option Explicit On
 
-Partial Public Class Search
+Namespace Booking
+    Partial Public Class Search
 
-    Protected WithEvents txtCheckIn As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtCheckIn As Global.System.Web.UI.WebControls.TextBox
 
-    Protected WithEvents txtCheckOut As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtCheckOut As Global.System.Web.UI.WebControls.TextBox
 
-    Protected WithEvents ddlGuests As Global.System.Web.UI.WebControls.DropDownList
+        Protected WithEvents ddlGuests As Global.System.Web.UI.WebControls.DropDownList
 
-    Protected WithEvents ddlRoomType As Global.System.Web.UI.WebControls.DropDownList
+        Protected WithEvents ddlRoomType As Global.System.Web.UI.WebControls.DropDownList
 
-    Protected WithEvents ddlMaxPrice As Global.System.Web.UI.WebControls.DropDownList
+        Protected WithEvents ddlMaxPrice As Global.System.Web.UI.WebControls.DropDownList
 
-    Protected WithEvents btnSearch As Global.System.Web.UI.WebControls.Button
+        Protected WithEvents btnSearch As Global.System.Web.UI.WebControls.Button
 
-    Protected WithEvents pnlNoResults As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlNoResults As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents pnlError As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlError As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents litError As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litError As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents rptRooms As Global.System.Web.UI.WebControls.Repeater
+        Protected WithEvents rptRooms As Global.System.Web.UI.WebControls.Repeater
 
-    Protected WithEvents pnlDefaultRooms As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlDefaultRooms As Global.System.Web.UI.WebControls.Panel
 
-End Class
+    End Class
+End Namespace

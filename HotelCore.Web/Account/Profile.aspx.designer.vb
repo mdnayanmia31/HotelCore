@@ -10,54 +10,56 @@
 Option Strict On
 Option Explicit On
 
-Partial Public Class Profile
+Namespace Account
+    Partial Public Class Profile
 
-    Protected WithEvents litUserName As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litUserName As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litUserEmail As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litUserEmail As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents lnkProfile As Global.System.Web.UI.WebControls.LinkButton
+        Protected WithEvents lnkProfile As Global.System.Web.UI.WebControls.LinkButton
 
-    Protected WithEvents lnkBookings As Global.System.Web.UI.WebControls.LinkButton
+        Protected WithEvents lnkBookings As Global.System.Web.UI.WebControls.LinkButton
 
-    Protected WithEvents lnkChangePassword As Global.System.Web.UI.WebControls.LinkButton
+        Protected WithEvents lnkChangePassword As Global.System.Web.UI.WebControls.LinkButton
 
-    Protected WithEvents pnlSuccess As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlSuccess As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents litSuccess As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litSuccess As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents pnlError As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlError As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents litError As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litError As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents pnlProfileInfo As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlProfileInfo As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents txtFirstName As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtFirstName As Global.System.Web.UI.WebControls.TextBox
 
-    Protected WithEvents txtLastName As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtLastName As Global.System.Web.UI.WebControls.TextBox
 
-    Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
 
-    Protected WithEvents txtPhone As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtPhone As Global.System.Web.UI.WebControls.TextBox
 
-    Protected WithEvents btnUpdateProfile As Global.System.Web.UI.WebControls.Button
+        Protected WithEvents btnUpdateProfile As Global.System.Web.UI.WebControls.Button
 
-    Protected WithEvents pnlBookings As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlBookings As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents ddlBookingStatus As Global.System.Web.UI.WebControls.DropDownList
+        Protected WithEvents ddlBookingStatus As Global.System.Web.UI.WebControls.DropDownList
 
-    Protected WithEvents pnlNoBookings As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlNoBookings As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents rptBookings As Global.System.Web.UI.WebControls.Repeater
+        Protected WithEvents rptBookings As Global.System.Web.UI.WebControls.Repeater
 
-    Protected WithEvents pnlChangePassword As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlChangePassword As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents txtCurrentPassword As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtCurrentPassword As Global.System.Web.UI.WebControls.TextBox
 
-    Protected WithEvents txtNewPassword As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtNewPassword As Global.System.Web.UI.WebControls.TextBox
 
-    Protected WithEvents txtConfirmNewPassword As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtConfirmNewPassword As Global.System.Web.UI.WebControls.TextBox
 
-    Protected WithEvents btnChangePassword As Global.System.Web.UI.WebControls.Button
+        Protected WithEvents btnChangePassword As Global.System.Web.UI.WebControls.Button
 
-End Class
+    End Class
+End Namespace

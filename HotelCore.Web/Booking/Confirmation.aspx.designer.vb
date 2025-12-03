@@ -10,32 +10,34 @@
 Option Strict On
 Option Explicit On
 
-Partial Public Class Confirmation
+Namespace Booking
+    Partial Public Class Confirmation
 
-    Protected WithEvents pnlError As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlError As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents litError As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litError As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents pnlConfirmation As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlConfirmation As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents litBookingRef As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litBookingRef As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litRoomType As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litRoomType As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litRoomNumber As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litRoomNumber As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litCheckIn As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litCheckIn As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litCheckOut As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litCheckOut As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litGuests As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litGuests As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litStatus As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litStatus As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litTotal As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litTotal As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents pnlGuests As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlGuests As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents rptGuests As Global.System.Web.UI.WebControls.Repeater
+        Protected WithEvents rptGuests As Global.System.Web.UI.WebControls.Repeater
 
-End Class
+    End Class
+End Namespace

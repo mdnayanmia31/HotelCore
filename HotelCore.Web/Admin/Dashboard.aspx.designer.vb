@@ -10,34 +10,36 @@
 Option Strict On
 Option Explicit On
 
-Partial Public Class Dashboard
+Namespace Admin
+    Partial Public Class Dashboard
 
-    Protected WithEvents litTotalBookings As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litTotalBookings As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litActiveBookings As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litActiveBookings As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litOccupancy As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litOccupancy As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litRevenue As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litRevenue As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents pnlNoBookings As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlNoBookings As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents rptRecentBookings As Global.System.Web.UI.WebControls.Repeater
+        Protected WithEvents rptRecentBookings As Global.System.Web.UI.WebControls.Repeater
 
-    Protected WithEvents litTodayCheckIns As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litTodayCheckIns As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litTodayCheckOuts As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litTodayCheckOuts As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litTodayNewBookings As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litTodayNewBookings As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litTodayCancellations As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litTodayCancellations As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litRoomsAvailable As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litRoomsAvailable As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litRoomsOccupied As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litRoomsOccupied As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litRoomsCleaning As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litRoomsCleaning As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litRoomsMaintenance As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litRoomsMaintenance As Global.System.Web.UI.WebControls.Literal
 
-End Class
+    End Class
+End Namespace

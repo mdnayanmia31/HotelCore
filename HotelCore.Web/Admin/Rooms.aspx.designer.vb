@@ -10,32 +10,34 @@
 Option Strict On
 Option Explicit On
 
-Partial Public Class Rooms
+Namespace Admin
+    Partial Public Class Rooms
 
-    Protected WithEvents pnlSuccess As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlSuccess As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents litSuccess As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litSuccess As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents pnlError As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlError As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents litError As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litError As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litAvailable As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litAvailable As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litOccupied As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litOccupied As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litCleaning As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litCleaning As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litMaintenance As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litMaintenance As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents ddlStatus As Global.System.Web.UI.WebControls.DropDownList
+        Protected WithEvents ddlStatus As Global.System.Web.UI.WebControls.DropDownList
 
-    Protected WithEvents ddlFloor As Global.System.Web.UI.WebControls.DropDownList
+        Protected WithEvents ddlFloor As Global.System.Web.UI.WebControls.DropDownList
 
-    Protected WithEvents ddlRoomType As Global.System.Web.UI.WebControls.DropDownList
+        Protected WithEvents ddlRoomType As Global.System.Web.UI.WebControls.DropDownList
 
-    Protected WithEvents rptRooms As Global.System.Web.UI.WebControls.Repeater
+        Protected WithEvents rptRooms As Global.System.Web.UI.WebControls.Repeater
 
-    Protected WithEvents pnlNoRooms As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlNoRooms As Global.System.Web.UI.WebControls.Panel
 
-End Class
+    End Class
+End Namespace

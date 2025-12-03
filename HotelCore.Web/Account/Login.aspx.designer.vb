@@ -10,26 +10,28 @@
 Option Strict On
 Option Explicit On
 
-Partial Public Class Login
+Namespace Account
+    Partial Public Class Login
 
-    Protected WithEvents pnlError As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlError As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents litError As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litError As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents pnlSuccess As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlSuccess As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents litSuccess As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litSuccess As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
 
-    Protected WithEvents rfvEmail As Global.System.Web.UI.WebControls.RequiredFieldValidator
+        Protected WithEvents rfvEmail As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
-    Protected WithEvents txtPassword As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtPassword As Global.System.Web.UI.WebControls.TextBox
 
-    Protected WithEvents rfvPassword As Global.System.Web.UI.WebControls.RequiredFieldValidator
+        Protected WithEvents rfvPassword As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
-    Protected WithEvents chkRememberMe As Global.System.Web.UI.WebControls.CheckBox
+        Protected WithEvents chkRememberMe As Global.System.Web.UI.WebControls.CheckBox
 
-    Protected WithEvents btnLogin As Global.System.Web.UI.WebControls.Button
+        Protected WithEvents btnLogin As Global.System.Web.UI.WebControls.Button
 
-End Class
+    End Class
+End Namespace

@@ -10,28 +10,30 @@
 Option Strict On
 Option Explicit On
 
-Partial Public Class Bookings
+Namespace Admin
+    Partial Public Class Bookings
 
-    Protected WithEvents pnlSuccess As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlSuccess As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents litSuccess As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litSuccess As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents pnlError As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlError As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents litError As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litError As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents txtSearch As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtSearch As Global.System.Web.UI.WebControls.TextBox
 
-    Protected WithEvents ddlStatus As Global.System.Web.UI.WebControls.DropDownList
+        Protected WithEvents ddlStatus As Global.System.Web.UI.WebControls.DropDownList
 
-    Protected WithEvents txtFromDate As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtFromDate As Global.System.Web.UI.WebControls.TextBox
 
-    Protected WithEvents txtToDate As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtToDate As Global.System.Web.UI.WebControls.TextBox
 
-    Protected WithEvents btnSearch As Global.System.Web.UI.WebControls.Button
+        Protected WithEvents btnSearch As Global.System.Web.UI.WebControls.Button
 
-    Protected WithEvents pnlNoResults As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlNoResults As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents rptBookings As Global.System.Web.UI.WebControls.Repeater
+        Protected WithEvents rptBookings As Global.System.Web.UI.WebControls.Repeater
 
-End Class
+    End Class
+End Namespace
