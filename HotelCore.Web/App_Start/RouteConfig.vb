@@ -8,6 +8,7 @@ Public Class RouteConfig
         routes.MapPageRoute("Home", "", "~/Default.aspx")
         routes.MapPageRoute("Facilities", "facilities", "~/Facilities.aspx")
         routes.MapPageRoute("Contact", "contact", "~/Contact.aspx")
+        routes.MapPageRoute("Error", "error", "~/Error.aspx")
         routes.MapPageRoute("RoomSearch", "rooms", "~/Booking/Search.aspx")
         routes.MapPageRoute("RoomDetails", "room/{id}", "~/Booking/RoomDetails.aspx")
         routes.MapPageRoute("Checkout", "checkout", "~/Booking/Checkout.aspx")

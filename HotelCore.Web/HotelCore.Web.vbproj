@@ -185,6 +185,7 @@
     <Content Include="Scripts\jquery.slicknav.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\owl.carousel.min.js" />
+    <Content Include="Scripts\hotelcore.js" />
 
     <Content Include="Web.config" />
   </ItemGroup>
@@ -194,6 +195,13 @@
     </Compile>
     <Compile Include="Default.aspx.vb">
       <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Error.aspx.designer.vb">
+      <DependentUpon>Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Error.aspx.vb">
+      <DependentUpon>Error.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Global.asax.vb">
@@ -358,6 +366,7 @@
     <Content Include="Shared\Site.Master" />
     <Content Include="Facilities.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="Error.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\Register.aspx" />
     <Content Include="Account\Profile.aspx" />
