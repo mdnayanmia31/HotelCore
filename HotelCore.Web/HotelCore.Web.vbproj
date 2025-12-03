@@ -108,7 +108,7 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Start\RouteConfig.cs" />
+
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\elegant-icons.css" />
     <Content Include="Content\css\flaticon.css" />
@@ -185,9 +185,7 @@
     <Content Include="Scripts\jquery.slicknav.js" />
     <Content Include="Scripts\main.js" />
     <Content Include="Scripts\owl.carousel.min.js" />
-    <Content Include="ViewSwitcher.ascx" />
-    <Content Include="ViewSwitcher.ascx.cs" />
-    <Content Include="ViewSwitcher.ascx.designer.cs" />
+
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
