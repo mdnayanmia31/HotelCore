@@ -3,10 +3,8 @@ Imports Microsoft.AspNet.FriendlyUrls
 
 Public Class RouteConfig
     Public Shared Sub RegisterRoutes(ByVal routes As RouteCollection)
-        ' Enable Friendly URLs
         routes.EnableFriendlyUrls()
 
-        ' Custom routes for clean URLs
         routes.MapPageRoute("Home", "", "~/Default.aspx")
         routes.MapPageRoute("Facilities", "facilities", "~/Facilities.aspx")
         routes.MapPageRoute("Contact", "contact", "~/Contact.aspx")

@@ -30,13 +30,13 @@ Update the connection string in `HotelCore.Web/Web.config`:
 
 ```xml
 <connectionStrings>
-    <add name="HotelCoreDB" 
-         connectionString="Server=YOUR_SERVER;Database=HotelCoreDB;Trusted_Connection=True;MultipleActiveResultSets=true" 
+    <add name="HotelCore" 
+         connectionString="Data Source=.\SQLEXPRESS;Initial Catalog=HotelCore;Integrated Security=True;Encrypt=False" 
          providerName="System.Data.SqlClient" />
 </connectionStrings>
 ```
 
-Replace `YOUR_SERVER` with your SQL Server instance name (e.g., `localhost`, `.\SQLEXPRESS`, etc.)
+Replace `.\SQLEXPRESS` with your SQL Server instance name if different.
 
 ### 4. Build and Run
 
