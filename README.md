@@ -1,12 +1,25 @@
 # HotelCore
 HotelCore is a single-hotel booking and management system built on ASP.NET WebForms(VB.NET), SQL Server, and Bootstrap 4. The system introduces "Flexible Stays & Smart Ops" - Supporting micro-stays(hourly bookings), configurable room setups, integrated housekeeping scheduling, and intelligent upsell suggestions.
 
+## Homepage (Desktop)
+[![HotelCore — Homepage (Desktop)](HotelCore.Web/Content/img/home-desktop-2025-12-03-full.webp)](https://www.figma.com/proto/MUxH6I2aHMisNaZ6bjgxcX/HotelCore-Website-Wireframe-Design?node-id=1-2&starting-point-node-id=1%3A2&t=K0xE670yJGuxS7eE-1)
+
 ## Prerequisites
 
 - **Visual Studio 2019 or later** (with ASP.NET and web development workload)
 - **SQL Server 2019 or later** (Express edition is sufficient)
 - **SQL Server Management Studio (SSMS)** (optional, for database management)
 - **.NET Framework 4.8**
+
+## Technology Stack
+
+| Layer | Technology | Version |
+|-------|-----------|---------|
+| Server Framework | ASP.NET WebForms | 4.8.1 |
+| Database | SQL Server | 2022 |
+| Data Access | ADO.NET | Native |
+| UI Framework | Bootstrap | 4.6.2 |
+| Client Scripting | jQuery | 3.6.0 |
 
 ## Getting Started
 
@@ -23,6 +36,7 @@ cd HotelCore
 2. Create a new database named `HotelCore`
 3. Execute the stored procedures from `HotelCore.Database/dbo/Stored Procedures/` folder
 4. Execute the table scripts from `HotelCore.Database/dbo/Tables/` folder
+
 
 ### 3. Configure Connection String
 
@@ -112,16 +126,6 @@ HotelCore/
 - **Text on Primary:** Cream (#efe8dd)
 - **Dark Text:** #333333
 - **Font:** Montserrat (Google Fonts)
-
-## Technology Stack
-
-| Layer | Technology | Version |
-|-------|-----------|---------|
-| Server Framework | ASP.NET WebForms | 4.8.1 |
-| Database | SQL Server | 2022 |
-| Data Access | ADO.NET | Native |
-| UI Framework | Bootstrap | 4.6.2 |
-| Client Scripting | jQuery | 3.6.0 |
 
 **System Flow and Entity Relationship Diagram (ERD):**
 https://lucid.app/lucidchart/9a1762ff-58c7-4bc7-8b02-398f0f4fd30d/view
