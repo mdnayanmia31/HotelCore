@@ -123,7 +123,7 @@ HotelCore/
 | UI Framework | Bootstrap | 4.6.2 |
 | Client Scripting | jQuery | 3.6.0 |
 
-**System flow and Entity Relationship Diagram (ERD):**
+**System Flow and Entity Relationship Diagram (ERD):**
 https://lucid.app/lucidchart/9a1762ff-58c7-4bc7-8b02-398f0f4fd30d/view
 
 **System Design:**
@@ -131,6 +131,9 @@ https://app.eraser.io/workspace/vCjBrquzEDEyJMkqBQhr?origin=share
 
 **UI Figma Design:**
 https://www.figma.com/design/MUxH6I2aHMisNaZ6bjgxcX/HotelCore-Website-Wireframe-Design?node-id=0-1&t=iqkPuq0J2S7GC3Hy-1
+
+**Figma Website Prototype:**
+https://www.figma.com/proto/MUxH6I2aHMisNaZ6bjgxcX/HotelCore-Website-Wireframe-Design?node-id=1-2&starting-point-node-id=1%3A2&t=K0xE670yJGuxS7eE-1
 
 **Project Planning:**
 https://github.com/users/mdnayanmia31/projects/2
