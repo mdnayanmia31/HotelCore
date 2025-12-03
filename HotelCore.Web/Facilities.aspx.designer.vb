@@ -10,6 +10,8 @@
 Option Strict On
 Option Explicit On
 
-Partial Public Class Facilities
+Namespace HotelCore.Web
+    Partial Public Class Facilities
 
-End Class
+    End Class
+End Namespace

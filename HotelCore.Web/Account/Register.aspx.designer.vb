@@ -10,40 +10,42 @@
 Option Strict On
 Option Explicit On
 
-Partial Public Class Register
+Namespace Account
+    Partial Public Class Register
 
-    Protected WithEvents pnlError As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlError As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents litError As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litError As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents txtFirstName As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtFirstName As Global.System.Web.UI.WebControls.TextBox
 
-    Protected WithEvents rfvFirstName As Global.System.Web.UI.WebControls.RequiredFieldValidator
+        Protected WithEvents rfvFirstName As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
-    Protected WithEvents txtLastName As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtLastName As Global.System.Web.UI.WebControls.TextBox
 
-    Protected WithEvents rfvLastName As Global.System.Web.UI.WebControls.RequiredFieldValidator
+        Protected WithEvents rfvLastName As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
-    Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
 
-    Protected WithEvents rfvEmail As Global.System.Web.UI.WebControls.RequiredFieldValidator
+        Protected WithEvents rfvEmail As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
-    Protected WithEvents revEmail As Global.System.Web.UI.WebControls.RegularExpressionValidator
+        Protected WithEvents revEmail As Global.System.Web.UI.WebControls.RegularExpressionValidator
 
-    Protected WithEvents txtPhone As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtPhone As Global.System.Web.UI.WebControls.TextBox
 
-    Protected WithEvents txtPassword As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtPassword As Global.System.Web.UI.WebControls.TextBox
 
-    Protected WithEvents rfvPassword As Global.System.Web.UI.WebControls.RequiredFieldValidator
+        Protected WithEvents rfvPassword As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
-    Protected WithEvents txtConfirmPassword As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtConfirmPassword As Global.System.Web.UI.WebControls.TextBox
 
-    Protected WithEvents rfvConfirmPassword As Global.System.Web.UI.WebControls.RequiredFieldValidator
+        Protected WithEvents rfvConfirmPassword As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
-    Protected WithEvents cvPassword As Global.System.Web.UI.WebControls.CompareValidator
+        Protected WithEvents cvPassword As Global.System.Web.UI.WebControls.CompareValidator
 
-    Protected WithEvents chkTerms As Global.System.Web.UI.WebControls.CheckBox
+        Protected WithEvents chkTerms As Global.System.Web.UI.WebControls.CheckBox
 
-    Protected WithEvents btnRegister As Global.System.Web.UI.WebControls.Button
+        Protected WithEvents btnRegister As Global.System.Web.UI.WebControls.Button
 
-End Class
+    End Class
+End Namespace

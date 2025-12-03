@@ -10,30 +10,32 @@
 Option Strict On
 Option Explicit On
 
-Partial Public Class Contact
+Namespace HotelCore.Web
+    Partial Public Class Contact
 
-    Protected WithEvents pnlSuccess As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlSuccess As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents pnlError As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlError As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents litError As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litError As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents pnlForm As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlForm As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents txtName As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtName As Global.System.Web.UI.WebControls.TextBox
 
-    Protected WithEvents rfvName As Global.System.Web.UI.WebControls.RequiredFieldValidator
+        Protected WithEvents rfvName As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
-    Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
 
-    Protected WithEvents rfvEmail As Global.System.Web.UI.WebControls.RequiredFieldValidator
+        Protected WithEvents rfvEmail As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
-    Protected WithEvents txtSubject As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtSubject As Global.System.Web.UI.WebControls.TextBox
 
-    Protected WithEvents txtMessage As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtMessage As Global.System.Web.UI.WebControls.TextBox
 
-    Protected WithEvents rfvMessage As Global.System.Web.UI.WebControls.RequiredFieldValidator
+        Protected WithEvents rfvMessage As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
-    Protected WithEvents btnSubmit As Global.System.Web.UI.WebControls.Button
+        Protected WithEvents btnSubmit As Global.System.Web.UI.WebControls.Button
 
-End Class
+    End Class
+End Namespace

@@ -10,44 +10,16 @@
 Option Strict On
 Option Explicit On
 
+Namespace HotelCore.Web
+    Partial Public Class _Default
 
+        Protected WithEvents txtCheckIn As Global.System.Web.UI.WebControls.TextBox
 
-Partial Public Class _Default
+        Protected WithEvents txtCheckOut As Global.System.Web.UI.WebControls.TextBox
 
-    '''<summary>
-    '''txtCheckIn control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtCheckIn As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents ddlGuests As Global.System.Web.UI.WebControls.DropDownList
 
-    '''<summary>
-    '''txtCheckOut control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents txtCheckOut As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents btnCheckAvailability As Global.System.Web.UI.WebControls.Button
 
-    '''<summary>
-    '''ddlGuests control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents ddlGuests As Global.System.Web.UI.WebControls.DropDownList
-
-    '''<summary>
-    '''btnCheckAvailability control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents btnCheckAvailability As Global.System.Web.UI.WebControls.Button
-
-End Class
+    End Class
+End Namespace

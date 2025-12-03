@@ -10,48 +10,50 @@
 Option Strict On
 Option Explicit On
 
-Partial Public Class RoomDetails
+Namespace Booking
+    Partial Public Class RoomDetails
 
-    Protected WithEvents litRoomType As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litRoomType As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents pnlError As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlError As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents litError As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litError As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents pnlRoomDetails As Global.System.Web.UI.WebControls.Panel
+        Protected WithEvents pnlRoomDetails As Global.System.Web.UI.WebControls.Panel
 
-    Protected WithEvents litRoomTypeName As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litRoomTypeName As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litDailyRate As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litDailyRate As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litRoomNumber As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litRoomNumber As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litFloor As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litFloor As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litSize As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litSize As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litCapacity As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litCapacity As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litBedConfig As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litBedConfig As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litStatus As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litStatus As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litDescription As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litDescription As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents txtCheckIn As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtCheckIn As Global.System.Web.UI.WebControls.TextBox
 
-    Protected WithEvents txtCheckOut As Global.System.Web.UI.WebControls.TextBox
+        Protected WithEvents txtCheckOut As Global.System.Web.UI.WebControls.TextBox
 
-    Protected WithEvents ddlGuests As Global.System.Web.UI.WebControls.DropDownList
+        Protected WithEvents ddlGuests As Global.System.Web.UI.WebControls.DropDownList
 
-    Protected WithEvents litEstDailyRate As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litEstDailyRate As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litNights As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litNights As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents litTotalPrice As Global.System.Web.UI.WebControls.Literal
+        Protected WithEvents litTotalPrice As Global.System.Web.UI.WebControls.Literal
 
-    Protected WithEvents btnCalculate As Global.System.Web.UI.WebControls.Button
+        Protected WithEvents btnCalculate As Global.System.Web.UI.WebControls.Button
 
-    Protected WithEvents btnBookNow As Global.System.Web.UI.WebControls.Button
+        Protected WithEvents btnBookNow As Global.System.Web.UI.WebControls.Button
 
-End Class
+    End Class
+End Namespace
