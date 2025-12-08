@@ -21,19 +21,20 @@ END
 SET IDENTITY_INSERT [dbo].[Roles] OFF;
 
 -- 2. Seed Users (At least one admin user for initial login)
--- Password: Admin@123 (hashed with a simple salt for demo purposes)
--- Note: In production, use proper password hashing with BCrypt or similar
+-- NOTE: These are placeholder hashes for demo/development purposes only.
+-- In production, implement proper password hashing with BCrypt, Argon2, or PBKDF2.
+-- Each user should have unique, cryptographically secure password hashes and salts.
 SET IDENTITY_INSERT [dbo].[Users] ON;
 
 IF NOT EXISTS (SELECT 1 FROM [dbo].[Users] WHERE [Email] = 'admin@hotelcore.com')
 BEGIN
     INSERT INTO [dbo].[Users] ([UserID], [Email], [PasswordHash], [PasswordSalt], [FirstName], [LastName], [PhoneNumber], [RoleID], [IsActive], [CreatedDate], [ModifiedDate])
     VALUES 
-        (1, 'admin@hotelcore.com', 'AQAAAAIAAYagAAAAEKNZ3LwK5P0gP5xY8z+1234567890abcdef1234567890abcdef1234567890abcdef', 'SaltValue123', 'System', 'Admin', '+1-555-0001', 1, 1, GETUTCDATE(), GETUTCDATE()),
-        (2, 'manager@hotelcore.com', 'AQAAAAIAAYagAAAAEKNZ3LwK5P0gP5xY8z+1234567890abcdef1234567890abcdef1234567890abcdef', 'SaltValue456', 'John', 'Smith', '+1-555-0002', 2, 1, GETUTCDATE(), GETUTCDATE()),
-        (3, 'frontdesk@hotelcore.com', 'AQAAAAIAAYagAAAAEKNZ3LwK5P0gP5xY8z+1234567890abcdef1234567890abcdef1234567890abcdef', 'SaltValue789', 'Emily', 'Johnson', '+1-555-0003', 3, 1, GETUTCDATE(), GETUTCDATE()),
-        (4, 'housekeeping@hotelcore.com', 'AQAAAAIAAYagAAAAEKNZ3LwK5P0gP5xY8z+1234567890abcdef1234567890abcdef1234567890abcdef', 'SaltValue012', 'Maria', 'Garcia', '+1-555-0004', 4, 1, GETUTCDATE(), GETUTCDATE()),
-        (5, 'guest@hotelcore.com', 'AQAAAAIAAYagAAAAEKNZ3LwK5P0gP5xY8z+1234567890abcdef1234567890abcdef1234567890abcdef', 'SaltValue345', 'Michael', 'Brown', '+1-555-0005', 5, 1, GETUTCDATE(), GETUTCDATE());
+        (1, 'admin@hotelcore.com', 'AQAAAAIAAYagAAAAEKNZ3LwK5P0gP5xY8z+A1B2C3D4E5F67890ABCDEF1234567890ABCDEF1234567890AB', '8F3E4D2C1B0A9876543210FEDCBA', 'System', 'Admin', '+1-555-0001', 1, 1, GETUTCDATE(), GETUTCDATE()),
+        (2, 'manager@hotelcore.com', 'BQAAAAIAAYagAAAAELMY4NxL6Q1hQ6yZ9z+B2C3D4E5F67890BCDEF01234567890BCDEF01234567890BC', '1A2B3C4D5E6F708192A3B4C5D6E7', 'John', 'Smith', '+1-555-0002', 2, 1, GETUTCDATE(), GETUTCDATE()),
+        (3, 'frontdesk@hotelcore.com', 'CQAAAAIAAYagAAAAEMOZ5PyM7R2iR7zA0z+C3D4E5F67890CDEF012345678901CDEF012345678901CD', 'F8E7D6C5B4A39281706F5E4D3C2B', 'Emily', 'Johnson', '+1-555-0003', 3, 1, GETUTCDATE(), GETUTCDATE()),
+        (4, 'housekeeping@hotelcore.com', 'DQAAAAIAAYagAAAAENPA6QzN8S3jS8AB1z+D4E5F67890DEFG123456789012DEFG123456789012DE', '5C4D3E2F1A0B8C7D6E5F4A3B2C1D', 'Maria', 'Garcia', '+1-555-0004', 4, 1, GETUTCDATE(), GETUTCDATE()),
+        (5, 'guest@hotelcore.com', 'EQAAAAIAAYagAAAAEOQB7R0O9T4kT9BC2z+E5F67890EFGH234567890123EFGH234567890123EF', '9D8E7F6A5B4C3D2E1F0A9B8C7D6E', 'Michael', 'Brown', '+1-555-0005', 5, 1, GETUTCDATE(), GETUTCDATE());
 END
 
 SET IDENTITY_INSERT [dbo].[Users] OFF;
