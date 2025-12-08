@@ -61,6 +61,7 @@
     <Folder Include="dbo\" />
     <Folder Include="dbo\Tables\" />
     <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="Scripts\" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="dbo\Tables\ConfigurationAmenities.sql" />
@@ -115,5 +116,8 @@
     <Build Include="dbo\Stored Procedures\sp_BookingGuest_Add.sql" />
     <Build Include="dbo\Stored Procedures\sp_Report_GetOccupancy.sql" />
     <Build Include="dbo\Stored Procedures\sp_Report_GenerateRevenue.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Scripts\SeedData.sql" />
   </ItemGroup>
 </Project>
