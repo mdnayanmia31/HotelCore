@@ -1,12 +1,11 @@
 /*
  * HotelCore Database Seed Data Script
- * This script populates essential tables with initial data for the hotel management system
  */
 
 -- Enable IDENTITY_INSERT for seeding data with specific IDs
 SET IDENTITY_INSERT [dbo].[Roles] ON;
 
--- 1. Seed Roles (must match CHECK constraint: Admin, Manager, Housekeeping, FrontDesk, Guest)
+-- 1. Seed Roles
 IF NOT EXISTS (SELECT 1 FROM [dbo].[Roles] WHERE [RoleName] = 'Admin')
 BEGIN
     INSERT INTO [dbo].[Roles] ([RoleID], [RoleName], [Description], [CreatedDate])
@@ -20,10 +19,7 @@ END
 
 SET IDENTITY_INSERT [dbo].[Roles] OFF;
 
--- 2. Seed Users (At least one admin user for initial login)
--- NOTE: These are placeholder hashes for demo/development purposes only.
--- In production, implement proper password hashing with BCrypt, Argon2, or PBKDF2.
--- Each user should have unique, cryptographically secure password hashes and salts.
+-- 2. Seed Users 
 SET IDENTITY_INSERT [dbo].[Users] ON;
 
 IF NOT EXISTS (SELECT 1 FROM [dbo].[Users] WHERE [Email] = 'admin@hotelcore.com')
@@ -217,5 +213,5 @@ END
 
 SET IDENTITY_INSERT [dbo].[Staff] OFF;
 
-PRINT 'Seed data inserted successfully!';
+PRINT 'Seed data inserted successfully!'; -- Confirmation
 GO
