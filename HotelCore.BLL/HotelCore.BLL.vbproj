@@ -130,21 +130,12 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="packages.config" />
-    <None Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HotelCore.DAL\HotelCore.DAL.vbproj">
       <Project>{d62c2e3d-2e5a-4b8c-91cb-35214923351d}</Project>
       <Name>HotelCore.DAL</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Start\RouteConfig.cs" />
-    <Content Include="Site.Mobile.Master.cs" />
-    <Content Include="Site.Mobile.Master.designer.cs" />
-    <Content Include="ViewSwitcher.ascx" />
-    <Content Include="ViewSwitcher.ascx.cs" />
-    <Content Include="ViewSwitcher.ascx.designer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

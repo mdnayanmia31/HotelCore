@@ -129,21 +129,12 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="packages.config" />
-    <None Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HotelCore.Database\HotelCore.Database.sqlproj">
       <Project>{5eae6b57-a4c5-4c53-afc7-c4e536e60bd5}</Project>
       <Name>HotelCore.Database</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="App_Start\RouteConfig.cs" />
-    <Content Include="Site.Mobile.Master.cs" />
-    <Content Include="Site.Mobile.Master.designer.cs" />
-    <Content Include="ViewSwitcher.ascx" />
-    <Content Include="ViewSwitcher.ascx.cs" />
-    <Content Include="ViewSwitcher.ascx.designer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
